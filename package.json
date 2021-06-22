@@ -11,7 +11,7 @@
   "author": "Marc ALEXANDRE (github@malexandre.fr)",
   "license": "MIT",
   "dependencies": {
-    "discord": "^0.8.2",
+    "discord.js": "^12.5.3",
     "tslib": "^2.3.0"
   },
   "engines": {
