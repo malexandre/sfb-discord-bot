@@ -4,9 +4,9 @@
   "description": "Discord Bot to draw randomly 7 champions ready to be drafted for Super Fantasy Brawl",
   "main": "index.js",
   "scripts": {
-    "start:dev": "ts-node index.ts",
-    "build": "tsc index.ts",
-    "start": "node index.js"
+    "start:dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js"
   },
   "author": "Marc ALEXANDRE (github@malexandre.fr)",
   "license": "MIT",
@@ -19,5 +19,8 @@
   },
   "engines": {
     "node": "14.17.1"
+  },
+  "devDependencies": {
+    "@types/ws": "^7.4.5"
   }
 }

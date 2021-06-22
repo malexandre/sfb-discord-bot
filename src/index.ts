@@ -1,5 +1,5 @@
 import { Client, MessageEmbed, Message } from "discord.js";
-import config from "./config.json";
+import config from "../config.json";
 
 const TOKEN = process.env.TOKEN;
 
@@ -32,7 +32,7 @@ function onMessage(msg: Message) {
 const BOT = new Client();
 
 BOT.on('ready', () => {
-  console.info(`Logged in as ${BOT.user.tag}!`);
+  console.info(`Logged in!`);
 });
 BOT.on('message', onMessage);
 
