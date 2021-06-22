@@ -4,7 +4,7 @@
   "description": "Discord Bot to draw randomly 7 champions ready to be drafted for Super Fantasy Brawl",
   "main": "index.js",
   "scripts": {
-    "start:dev": "ts-node src/index.ts",
+    "start:dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\"",
     "build": "tsc",
     "start": "node build/index.js"
   },
@@ -13,14 +13,15 @@
   "dependencies": {
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4",
-    "@typeit/discord": "^4.0.10",
-    "@types/node": "^15.12.4",
     "discord": "^0.8.2"
   },
   "engines": {
     "node": "14.17.1"
   },
   "devDependencies": {
-    "@types/ws": "^7.4.5"
+    "@typeit/discord": "^4.0.10",
+    "@types/node": "^15.12.4",
+    "@types/ws": "^7.4.5",
+    "nodemon": "^2.0.7"
   }
 }
