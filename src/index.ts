@@ -23,7 +23,10 @@ function onMessage(msg: Message) {
     const response = new MessageEmbed()
     response.setTitle("Tirage de ta partie :")
     response.setDescription(`${msg.author} sera le ${Math.random() < 0.5 ? "premier" : "second" } joueur.`)
-    response.addField("Champions disponibles :", shuffle(config.champions).slice(0, 7).join("\n"))
+    response.addField(
+      "Champions disponibles :",
+      shuffle(shuffle(shuffle(config.champions))).slice(0, 7).join("\n")
+    )
 
     msg.channel.send(response)
   }
